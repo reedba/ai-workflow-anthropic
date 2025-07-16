@@ -25,12 +25,12 @@ A comprehensive collection of AI-powered workflow demonstrations showcasing docu
 - **Real-time Metrics**: Processing times, speedup ratios, efficiency gains
 - **Business Applications**: Batch processing and workflow acceleration
 
-### 🎭 **4. Orchestrator-Worker Pattern**
-**File**: `orchestrator_worker.py` | **Port**: `7863`
-- **Distributed Architecture**: Central orchestrator managing specialized AI workers
-- **7 Specialized Workers**: Document analysis, sentiment, translation, summarization, questions, classification
-- **Task Coordination**: Priority-based task scheduling and load balancing
-- **System Monitoring**: Real-time worker performance and system health trackingent Processing & Analysis
+### � **5. AI Evaluator-Optimizer System**
+**File**: `evaluator_optimizer.py` | **Port**: `7864`
+- **Multi-Metric Evaluation**: Accuracy, relevance, completeness, clarity assessment
+- **Systematic Optimization**: Prompt engineering and parameter tuning
+- **Performance Analytics**: Real-time metrics and optimization tracking
+- **A/B Testing**: Scientific comparison of AI configurations
 
 A comprehensive AI-powered document processing system using OpenAI's API and Gradio for intelligent document analysis through advanced prompt chaining.
 
@@ -67,6 +67,10 @@ python parallelization.py
 # Terminal 4: Orchestrator-Worker System
 python orchestrator_worker.py
 # Access at: http://localhost:7863
+
+# Terminal 5: Evaluator-Optimizer System
+python evaluator_optimizer.py
+# Access at: http://localhost:7864
 ```
 
 ### **Single Workflow Setup**
@@ -123,14 +127,14 @@ Performance optimization demonstration:
 2. **🔄 Processing Modes**: Sequential vs Parallel execution comparison
 3. **📈 Performance Analysis**: Real-time metrics showing speedup and efficiency gains
 
-### 🎭 **Orchestrator-Worker Workflow**
-Distributed AI processing architecture:
-1. **📋 Task Submission**: Central orchestrator receives and queues tasks
-2. **👥 Worker Allocation**: Tasks assigned to specialized AI workers based on type
-3. **⚡ Parallel Execution**: Multiple workers process tasks concurrently
-4. **📊 Coordination**: Results collected and performance monitored
+### � **Evaluator-Optimizer Workflow**
+Advanced AI evaluation and optimization system:
+1. **🧪 Test Case Creation**: Define input-output pairs for systematic AI testing
+2. **� Multi-Metric Assessment**: Evaluate accuracy, relevance, completeness, and clarity
+3. **🎯 Systematic Optimization**: Test multiple prompt variations and parameter configurations
+4. **� Performance Analytics**: Track improvements and generate optimization recommendations
 
-**Worker Types**: Document Analyzer (2x), Sentiment Analyzer, Translator, Summarizer, Question Generator, Category Classifier
+**Optimization Focus Areas**: Speed & Cost, Quality & Accuracy, Balanced Performance
 
 ## 📁 Project Structure
 
@@ -138,7 +142,9 @@ Distributed AI processing architecture:
 ai-workflow-anthropic/
 ├── prompt_chaining.py          # Document processing workflow
 ├── routing.py                  # Intelligent request routing  
-├── orchestrator_worker.py        # Distributed orchestrator-worker system
+├── parallelization.py          # Concurrent AI processing demonstration
+├── orchestrator_worker.py      # Distributed orchestrator-worker system
+├── evaluator_optimizer.py      # AI evaluation and optimization system
 ├── requirements.txt            # Python dependencies
 ├── .env                       # Environment variables (create this)
 ├── .gitignore                # Git ignore file
@@ -146,6 +152,7 @@ ai-workflow-anthropic/
 ├── ROUTING_README.md         # Routing workflow details
 ├── PARALLELIZATION_README.md # Parallelization documentation
 ├── ORCHESTRATOR_README.md    # Orchestrator-worker pattern details
+├── EVALUATOR_README.md       # Evaluation-optimization documentation
 └── sample_business_report.txt # Sample document for testing
 ```
 
