@@ -1,6 +1,6 @@
 # 🤖 AI Workflow Demonstrations Suite
 
-A comprehensive collection of AI-powered workflow demonstrations showcasing document processing, intelligent routing, and parallelization techniques using OpenAI's API and Gradio interfaces.
+A comprehensive collection of AI-powered workflow demonstrations showcasing document processing, intelligent routing, parallelization techniques, and orchestrator-worker patterns using OpenAI's API and Gradio interfaces.
 
 ## 🚀 Available Workflows
 
@@ -23,7 +23,14 @@ A comprehensive collection of AI-powered workflow demonstrations showcasing docu
 - **Performance Comparison**: Sequential vs Parallel processing
 - **6 Concurrent AI Tasks**: Summary, sentiment, keywords, questions, translation, categorization
 - **Real-time Metrics**: Processing times, speedup ratios, efficiency gains
-- **Business Applications**: Batch processing and workflow accelerationent Processing & Analysis
+- **Business Applications**: Batch processing and workflow acceleration
+
+### 🎭 **4. Orchestrator-Worker Pattern**
+**File**: `orchestrator_worker.py` | **Port**: `7863`
+- **Distributed Architecture**: Central orchestrator managing specialized AI workers
+- **7 Specialized Workers**: Document analysis, sentiment, translation, summarization, questions, classification
+- **Task Coordination**: Priority-based task scheduling and load balancing
+- **System Monitoring**: Real-time worker performance and system health trackingent Processing & Analysis
 
 A comprehensive AI-powered document processing system using OpenAI's API and Gradio for intelligent document analysis through advanced prompt chaining.
 
@@ -56,6 +63,10 @@ python routing.py
 # Terminal 3: Parallelization Demo
 python parallelization.py
 # Access at: http://localhost:7862
+
+# Terminal 4: Orchestrator-Worker System
+python orchestrator_worker.py
+# Access at: http://localhost:7863
 ```
 
 ### **Single Workflow Setup**
@@ -112,7 +123,14 @@ Performance optimization demonstration:
 2. **🔄 Processing Modes**: Sequential vs Parallel execution comparison
 3. **📈 Performance Analysis**: Real-time metrics showing speedup and efficiency gains
 
-**AI Tasks**: Summarization, Sentiment Analysis, Keyword Extraction, Question Generation, Translation, Categorization
+### 🎭 **Orchestrator-Worker Workflow**
+Distributed AI processing architecture:
+1. **📋 Task Submission**: Central orchestrator receives and queues tasks
+2. **👥 Worker Allocation**: Tasks assigned to specialized AI workers based on type
+3. **⚡ Parallel Execution**: Multiple workers process tasks concurrently
+4. **📊 Coordination**: Results collected and performance monitored
+
+**Worker Types**: Document Analyzer (2x), Sentiment Analyzer, Translator, Summarizer, Question Generator, Category Classifier
 
 ## 📁 Project Structure
 
@@ -120,13 +138,14 @@ Performance optimization demonstration:
 ai-workflow-anthropic/
 ├── prompt_chaining.py          # Document processing workflow
 ├── routing.py                  # Intelligent request routing  
-├── parallelization.py          # AI parallelization demo
+├── orchestrator_worker.py        # Distributed orchestrator-worker system
 ├── requirements.txt            # Python dependencies
 ├── .env                       # Environment variables (create this)
 ├── .gitignore                # Git ignore file
 ├── README.md                 # Main project documentation
 ├── ROUTING_README.md         # Routing workflow details
 ├── PARALLELIZATION_README.md # Parallelization documentation
+├── ORCHESTRATOR_README.md    # Orchestrator-worker pattern details
 └── sample_business_report.txt # Sample document for testing
 ```
 
