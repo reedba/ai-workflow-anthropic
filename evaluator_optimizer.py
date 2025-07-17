@@ -199,6 +199,18 @@ class AIEvaluator:
             
         except:
             return 0.7
+    
+    def _calculate_cost(self, model: str, token_count: int) -> float:
+        """Calculate approximate API cost"""
+        # Simplified cost calculation (actual costs vary)
+        cost_per_1k_tokens = {
+            "gpt-3.5-turbo": 0.0015,
+            "gpt-4": 0.03,
+            "gpt-4-turbo": 0.01
+        }
+        
+        rate = cost_per_1k_tokens.get(model, 0.002)
+        return (token_count / 1000) * rate
 
 class AIOptimizer:
     """Optimizes AI prompts and parameters based on evaluation results"""
