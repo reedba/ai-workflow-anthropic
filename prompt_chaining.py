@@ -355,34 +355,34 @@ def gradio_chain_demo(input_text, selected_steps):
 
 # Create improved Gradio interface demonstrating true prompt chaining
 with gr.Blocks(title="AI Prompt Chaining Demo", theme=gr.themes.Soft()) as demo:
-    gr.Markdown("""
-    # 🔗 True Prompt Chaining Architecture
+    # gr.Markdown("""
+    # # 🔗 True Prompt Chaining Architecture
     
-    Demonstrates the **correct way** to implement prompt chaining with modular, reusable methods.
-    """)
+    # Demonstrates the **correct way** to implement prompt chaining with modular, reusable methods.
+    # """)
     
-    gr.Markdown("""
-    ## 🔄 Architecture Comparison:
+    # gr.Markdown("""
+    # ## 🔄 Architecture Comparison:
     
-    **❌ Sequential Prompting (What NOT to do):**
-    ```python
-    def bad_approach(content):
-        # All steps in one big function
-        result1 = ai_call(step1_prompt + content)
-        result2 = ai_call(step2_prompt + result1)
-        result3 = ai_call(step3_prompt + result2)
-        return result3
-    ```
+    # **❌ Sequential Prompting (What NOT to do):**
+    # ```python
+    # def bad_approach(content):
+    #     # All steps in one big function
+    #     result1 = ai_call(step1_prompt + content)
+    #     result2 = ai_call(step2_prompt + result1)
+    #     result3 = ai_call(step3_prompt + result2)
+    #     return result3
+    # ```
     
-    **✅ True Prompt Chaining (Correct approach):**
-    ```python
-    class PromptChain:
-        def step_1_summarize(self, content): ...    # Modular
-        def step_2_extract_points(self, summary): ...  # Reusable  
-        def step_3_categorize(self, summary, points): ...  # Composable
-        def execute_full_chain(self, content): ...  # Orchestration
-    ```
-    """)
+    # **✅ True Prompt Chaining (Correct approach):**
+    # ```python
+    # class PromptChain:
+    #     def step_1_summarize(self, content): ...    # Modular
+    #     def step_2_extract_points(self, summary): ...  # Reusable  
+    #     def step_3_categorize(self, summary, points): ...  # Composable
+    #     def execute_full_chain(self, content): ...  # Orchestration
+    # ```
+    # """)
     
     with gr.Tabs():
         # Tab 1: Full Chain Execution
